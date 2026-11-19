@@ -3,7 +3,7 @@
 // حتى من غير إنترنت. البحث نفسه بيتم محليًا على الفهرس المخزن في
 // IndexedDB جوه المتصفح، فمش محتاج إنترنت أصلاً بعد أول فهرسة.
 
-const CACHE_NAME = 'jigsearchprivate-cache-v1';
+const CACHE_NAME = 'jigsearchprivate-cache-v2';
 const APP_SHELL = [
   './',
   './index.html',
