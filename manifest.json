@@ -1,6 +1,6 @@
 {
-  "name": "JIG SEARCH PRIVATE",
-  "short_name": "JIG PRIVATE",
+  "name": "JIG SEARCH",
+  "short_name": "JIG SEARCH",
   "description": "Search for files (PDF, Word, Excel, PowerPoint, images) in Google Drive",
   "start_url": "./",
   "scope": "./",
