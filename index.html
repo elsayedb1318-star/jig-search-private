@@ -4394,8 +4394,8 @@
     };
     // v2: سجل مشاهدة دائم لكل إشعار على هذا المتصفح؛ لا نحذف علامة المشاهدة عند انتهاء الساعة.
     // تغيير اسم المفتاح يسمح بترحيل بيانات النسخة السابقة بدل بدء عدّ الساعة من جديد.
-    const NOTICE_STATE_KEY = 'jigsearch_important_instructions_notice_state_v2';
-    const LEGACY_STATE_KEY = 'jigsearch_important_instructions_notice_state_v1';
+    const NOTICE_STATE_KEY = 'jigsearchprivate_important_instructions_notice_state_v2';
+    const LEGACY_STATE_KEY = 'jigsearchprivate_important_instructions_notice_state_v1';
     const ONE_HOUR = 60 * 60 * 1000;
     const MAX_NOTICE_AGE = 7 * 24 * 60 * 60 * 1000; // أسبوع من وقت الإضافة أو التعديل
     const IMPORTANT_APP_URL = 'https://elsayedb1318-star.github.io/important-instructions./';
@@ -4502,7 +4502,7 @@
       render();
     }
     try{
-      const appName = 'jigsearch-important-instructions-notices';
+      const appName = 'jigsearchprivate-important-instructions-notices';
       const app = firebase.apps.some(a => a.name === appName)
         ? firebase.app(appName)
         : firebase.initializeApp(NOTICE_DB_CONFIG, appName);
