@@ -1130,7 +1130,7 @@
   .upload-box input{ width:100%; box-sizing:border-box; padding:10px 12px; border-radius:10px; border:1px solid rgba(128,128,128,.5); background:transparent; color:inherit; font:inherit; }
   .upload-box button{ border:0; cursor:pointer; text-align:center; }
   .upload-box button:disabled{ opacity:.6; cursor:default; }
-  .upload-status{ font-size:.9rem; white-space:pre-line; min-height:1.2em; }
+  .upload-status{ font-size:.9rem; white-space:pre-line; min-height:1.2em; max-height:45vh; overflow-y:auto; overscroll-behavior:contain; }
 
   /* Sticky top: brand + search form stay pinned while results scroll */
   .header.sticky-top{
@@ -3861,6 +3861,9 @@
     const statusEl = document.getElementById('uploadStatus');
     const MAX_BYTES = 25 * 1024 * 1024;
     let busy = false;
+    // آخر سطر في حالة الرفع يفضل ظاهر دايمًا (سكرول أوتوماتيك لتحت)
+    new MutationObserver(() => { statusEl.scrollTop = statusEl.scrollHeight; })
+      .observe(statusEl, { childList: true, characterData: true, subtree: true });
     const ar = () => currentLang === 'ar';
 
     function applyUploadLang(){
